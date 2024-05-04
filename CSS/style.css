@@ -2,11 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins' , sans-serif;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito' , sans-serif;
 }
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262b40;
+    --text-color: #fff;
+    --main-color: #59b2f4; 
+}
+
+hmtl {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
 
 body {
     color: #ededed;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
 }
 
 .header {
@@ -14,8 +38,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 2rem 9%;
+    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,37 +47,56 @@ body {
 }
 
 .logo {
-    position: relative;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
 }
 
 .navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
 }
 
-.navbar a:hover {
-    color: #0ef;
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
 }
 
-.home  {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background-image:no-repeat;
-    background-size: cover;
-    background-position: center;
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 70px 10% 0;
-    background-color: rgb(0, 133, 173);
+}
+
+.home-content h3 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    width: 57vw;
+    animation: floatImage 4s ease-in-out infinite; 
 }
